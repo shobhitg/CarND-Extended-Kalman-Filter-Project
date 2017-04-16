@@ -25,6 +25,9 @@ public:
   */
   Eigen::MatrixXd CalculateJacobian(const Eigen::VectorXd& x_state);
 
+  Eigen::VectorXd ConvertPolarToCartesian(const Eigen::VectorXd& measurements);
+  Eigen::VectorXd ConvertCartesianToPolar(const Eigen::VectorXd& x);
+  float epsilon = 0.0001;
 };
 
 #endif /* TOOLS_H_ */
